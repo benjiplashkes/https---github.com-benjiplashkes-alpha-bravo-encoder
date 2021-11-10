@@ -13,15 +13,18 @@
         <header>
             <div class="searchBar">
                 <h1>Alpha Bravo Encoder</h1>
-                <form class="searchForm" id="encodeForm">
+                <form class="searchForm" id="encodeForm" action"searchQuery(input.value)">
                     <input type="text" id="input">
                     <button id="submit">encode</button>
                 </form>
             </div>
         </header>
         <section class="answer">
-            <div id="encoded">
+            <div id="encoded-wrapper">
                 <!--JS Text Here-->
+                <pre id="encoded">
+                    
+                </pre>
             </div>
         </section>
     </main>
