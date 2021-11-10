@@ -1,5 +1,6 @@
 const input = document.querySelector('#input')
 const encodeButton = document.querySelector('#submit')
+const encodeForm = document.querySelector('#encodeForm')
 
 let stringToEncode = ""
 let encodedString = ""  
@@ -51,6 +52,20 @@ const encodeString = (string)=>{
 const handleInputChange = (event) => {
     stringToEncode = event.target.value
     
+    
+}
+const handleFormSubmit = (event) => {
+    console.log(event)
+    
+    
+}
+const handleKeyBoardEnter = (event) => {
+    console.log(event)
+    if(event.key === "Enter"){
+        encodeString(input.value)
+    }
+    
+    
 }
 const handleClick = (event) => {
     event.preventDefault()
@@ -59,5 +74,6 @@ const handleClick = (event) => {
 }
 
 input.addEventListener("change", handleInputChange)
+input.addEventListener("change", handleKeyBoardEnter)
 encodeButton.addEventListener("click", handleClick)
-
+encodeForm.addEventListener("submit", handleFormSubmit)
